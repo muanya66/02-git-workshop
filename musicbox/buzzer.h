@@ -54,7 +54,7 @@ public:
             if (note == NOTE_SILENCE)
                 noTone(pin);
             else 
-                tone(pin, notes[currentNote]);
+                tone(pin, notes[currentNote]);//позволяет переключаться пину с некоторой чистотой, currentNote - частота
 
             noteStartedMs = millis();
             currentNote = (currentNote + 1)%melodyLength;
